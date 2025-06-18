@@ -46,22 +46,22 @@
             <h1>Over the Rainbow</h1>
             <h2>by Kamakawiwo'ole</h2>
             <button class="toggle-all">Show/Hide All Content</button>
-            <article class="card">
-                <h2 class="toggle-text">Verse 1</h2>
+            <article class="card toggle-text">
+                <h2>Verse 1</h2>
                 <p class="hidden">
                     Somewhere over the rainbow, way up high<br>
                     and the dreams that you dream of once in a lullaby. Ohhhh
                 </p>
             </article>
-            <article class="card">
-                <h2 class="toggle-text">Verse 2</h2>
+            <article class="card toggle-text">
+                <h2>Verse 2</h2>
                 <p class="hidden">
                     Somewhere over the rainbow bluebirds fly<br>
                     and the dreams that you dream of, dreams really do come true. Ohhhh
                 </p>
             </article>
-            <article class="card">
-                <h2 class="toggle-text">Bridge</h2>
+            <article class="card toggle-text">
+                <h2>Bridge</h2>
                 <p class="hidden">
                     Someday I'll wish upon a star<br>
                     wake up where the clouds are far behind me-e-e<br>
@@ -80,7 +80,8 @@
         toggleTexts.forEach(toggleText => {
             toggleText.addEventListener('click', () => {
                 // Find the next sibling content paragraph
-                const content = toggleText.nextElementSibling;
+                // const content = toggleText.nextElementSibling;
+                const content = toggleText.querySelector('p');
                 // Toggle the hidden class
                 content.classList.toggle('hidden');
             });

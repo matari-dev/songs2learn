@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over the Rainbow</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: darkgreen;
+            color: white;
+        }
+        p {
+            color: yellow;
+            font-size: larger;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            padding: 16px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .toggle-text {
+            cursor: pointer;
+            color: white;
+        }
+        .toggle-all {
+            cursor: pointer;
+            font-size: large;
+            color: yellow;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: darkblue;
+            border: none;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Over the Rainbow</h1>
+            <h2>by Kamakawiwo'ole</h2>
+            <button class="toggle-all">Show/Hide All Content</button>
+            <article class="card">
+                <h2 class="toggle-text">Verse 1</h2>
+                <p class="hidden">
+                    Somewhere over the rainbow, way up high<br>
+                    and the dreams that you dream of once in a lullaby. Ohhhh
+                </p>
+            </article>
+            <article class="card">
+                <h2 class="toggle-text">Verse 2</h2>
+                <p class="hidden">
+                    Somewhere over the rainbow bluebirds fly<br>
+                    and the dreams that you dream of, dreams really do come true. Ohhhh
+                </p>
+            </article>
+            <article class="card">
+                <h2 class="toggle-text">Bridge</h2>
+                <p class="hidden">
+                    Someday I'll wish upon a star<br>
+                    wake up where the clouds are far behind me-e-e<br>
+                    Where troubles melt like lemon drops,<br>
+                    high above the chimney tops<br>
+                    that's where, you'll find me, oh
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // Get all toggle text elements
+        const toggleTexts = document.querySelectorAll('.toggle-text');
+
+        toggleTexts.forEach(toggleText => {
+            toggleText.addEventListener('click', () => {
+                // Find the next sibling content paragraph
+                const content = toggleText.nextElementSibling;
+                // Toggle the hidden class
+                content.classList.toggle('hidden');
+            });
+        });
+
+        // Show/Hide all paragraphs
+        const toggleAllButton = document.querySelector('.toggle-all');
+        toggleAllButton.addEventListener('click', () => {
+            const paragraphs = document.querySelectorAll('p');
+            paragraphs.forEach(p => {
+                p.classList.toggle('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

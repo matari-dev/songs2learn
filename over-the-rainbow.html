@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,12 @@
             background-color: darkgreen;
             color: white;
         }
+
         p {
             color: yellow;
             font-size: larger;
         }
+
         .card {
             border: 1px solid #ccc;
             border-radius: 15px;
@@ -21,13 +24,16 @@
             margin: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+
         .hidden {
             visibility: hidden;
         }
+
         .toggle-text {
             cursor: pointer;
             color: white;
         }
+
         .toggle-all {
             cursor: pointer;
             font-size: large;
@@ -40,6 +46,7 @@
         }
     </style>
 </head>
+
 <body>
     <main>
         <section>
@@ -70,6 +77,30 @@
                     that's where, you'll find me, oh
                 </p>
             </article>
+            <article class="card toggle-text">
+                <h2>V3</h2>
+                <p class="hidden">
+                    Somewhere over the rainbow, bluebirds fly<br>
+                    and the dreams that you dare to, oh, why, oh why can't I? I-I-I, oh
+                </p>
+            </article>
+            <article class="card toggle-text">
+                <h2>Bridge</h2>
+                <p class="hidden">
+                    Someday I'll wish upon a star,<br>
+                    wake up where the clouds are far behind me-e-e.<br>
+                    Where troubles melts like lemon drops,<br>
+                    high above the chimney tops,<br>
+                    that's where you'll find me, oh<br>
+                </p>
+            </article>
+            <article class="card toggle-text">
+                <h2>V4</h2>
+                <p class="hidden">
+                    Somewhere over the rainbow, way up high<br>
+                    and the dreams that you dare to, why, oh why can't I? I-I-I<br>
+                </p>
+            </article>
         </section>
     </main>
 
@@ -97,4 +128,5 @@
         });
     </script>
 </body>
+
 </html>
